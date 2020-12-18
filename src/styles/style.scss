@@ -1,0 +1,30 @@
+@import 'nullstyle.scss';
+@import 'variables.scss';
+@import 'fonts.scss';
+
+@import 'header.scss';
+@import 'content.scss';
+@import 'menu.scss';
+@import 'footer.scss';
+
+body {
+    font-family: $fontFamily;
+}
+
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.container {
+    max-width: $maxWidthContainer;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+
+

@@ -1,0 +1,508 @@
+.content {
+    width: 1366px;
+    margin: 0 auto;
+    @media (max-width: 1366px) {
+        width: 100%;
+    }
+}
+
+.private {
+    display: flex;
+    &__column {
+        flex: 1 1 50%;
+        &:last-child {
+            background: #000;
+        }
+        @media (max-width: $break-md) {
+            &:first-child {
+                display: none;
+            }
+            &:last-child {
+                flex: 1 1 100%;
+            }
+        }
+    }
+
+    &__image {
+        height: 100%;
+        width: 100%;
+        background: url("../img/block_1/01.jpg")  no-repeat;
+    }
+}
+
+.private-body {
+    padding: 50px 15px 50px 62px;
+
+    @media (max-width: $break-sm) {
+        padding: 20px;
+    }
+    
+    &__title {
+        color: #ffffff;
+        font-family: 'Akzidenz-Grotesk BQ';
+        font-size: 50px;
+        line-height: 50px;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        margin: 0 0 37px 0;
+
+        @media (max-width: $break-sm) {
+            margin: 0 0 20px 0;
+            font-size: 40px;
+        }
+    }
+
+    &__text {
+        color: #ffffff;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 25px;
+        margin: 0 0 55px 0;
+
+        @media (max-width: $break-sm) {
+            margin: 0 0 20px 0;
+        }
+    }
+}
+
+.private-body-content {
+    max-width: 305px;
+    @media (max-width: $break-md) {
+        max-width: none;
+    }
+}
+
+.private-body-buttons__item:first-child {
+    margin: 0 14px 0 0; 
+}
+
+.btn {
+    height: 50px;
+    display: inline-block;
+    line-height: 50px;
+    font-size: 15px;
+    line-height: 25px;
+    font-family: 'Conv_Bebas Neue';
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    &--white {
+        background-color: #fff;
+        color: #000;
+        padding: 0 33px;
+    }
+}
+
+.link {
+    color: #000;
+    font-family: 'Conv_Bebas Neue';    
+    font-size: 15px;
+    line-height: 25px;
+    text-decoration: underline;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    &--white {
+        color: #fff;
+    }
+}
+
+//===================================================
+
+.products {
+    padding: 75px 0 45px 0;
+
+    @media (max-width: $break-lg) {
+        padding: 30px 0 10px 0;
+    }
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+        flex: 0 0 25%;
+        margin: 0 0 20px 0;
+
+        @media (max-width: $break-lg)  {
+            flex: 0 0 50%;
+            align-items: center;
+        }
+
+        @media (max-width: $break-sm) {
+            flex: 0 0 100%;
+            align-items: center;
+        }
+    }
+}
+
+.products-body {
+    display: flex;
+
+    @media (max-width: $break-lg) {
+        flex-wrap: wrap;
+    }
+}
+
+.products-item-buttons {
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: $break-sm) {
+        align-self: center;
+        flex-direction: row;
+        align-items: center;
+        margin: 0 0 15px 0;
+    }
+}
+
+.products-item {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+   
+    &__image {
+        margin: 0 0 25px 0;
+     
+        @media (max-width: $break-sm) {
+            align-self: center;
+            margin: 0 0 15px 0;
+        }
+    }
+
+    &__title {
+        height: 50px;
+        overflow: hidden;
+        max-width: 185px;
+        color: #000000;
+        font-family: 'Akzidenz-Grotesk BQ';
+        font-size: 25px;
+        line-height: 25px;
+        text-transform: uppercase;
+        letter-spacing: 2.5px;
+
+        @media (max-width: $break-sm) {
+            font-size: 20px;
+            height: 30px;
+            align-self: center;
+            max-width: none;
+        }
+    }
+
+    &__text {
+        max-width: 185px;
+        color: #000000;
+        font-size: 15px;
+        line-height: 25px;
+        margin: 25px 0;
+        flex: 1 1 auto;
+
+        @media (max-width: $break-lg) {
+            margin: 10px 0;
+        }
+
+        @media (max-width: $break-sm) {
+            max-width: 90%;
+            align-self: center;
+            text-align: center;
+            margin:0 0 10px 0;
+        }
+    }
+
+    &__btn {
+        margin: 0 0 30px 0;
+        max-width: 185px;
+        padding: 17px 30px;
+
+        @media (max-width: $break-lg) {
+            margin: 0 0 10px 0;
+        }
+
+        @media (max-width: $break-sm) {
+            margin: 0 14px 0 0;
+        }
+    }
+}
+
+//===================================================
+
+.why-top {
+    display: flex;
+
+    &__column {
+        flex: 0 0 50%;
+
+        @media (max-width: $break-md) {
+            flex: 1 1 100%;
+            &:last-child {
+                display: none;
+            }
+        }
+    }
+
+    &__text {
+        color: #ffffff;
+        font-family: 'Akzidenz-Grotesk BQ';
+        font-size: 50px;
+        line-height: 25px;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        background-color: #000000;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 56px 60px;
+
+        @media (max-width: $break-lg) {
+            font-size: 40px;
+            padding: 36px 30px;
+        }
+
+        @media (max-width: $break-md) {
+            justify-content: center;
+        }
+
+        @media (max-width: $break-sm) {
+            padding: 10px;
+            font-size: 30px;
+        }
+    }
+
+    &__image {
+        height: 100%;
+    }
+}
+
+.why-body-row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 0;
+
+    @media (max-width: $break-sm) {
+        padding: 20px 0;
+    }
+}
+.why-body {
+    background: #ebebeb;
+
+    &__column {
+        flex: 0 0 50%;
+        margin: 0 0 50px 0;
+
+        @media (max-width: $break-md) {
+            flex: 0 0 100%;
+            align-items: center;
+        }
+
+        @media (max-width: $break-md) {
+            margin: 0 0 20px 0;
+        }
+    }
+}
+
+.why-body-item {
+    display: flex;
+    &__icon {
+        display: flex;
+        flex: 0 0 100px;
+        align-items: center;
+        justify-content: center;
+        height: 100px;
+        background: #000000;
+        margin: 0 12px 0 0;
+
+        @media (max-width: $break-sm) {
+            flex: 0 0 80px;
+            height: 80px;
+        }
+    }
+}
+
+.why-body-item-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 100%;
+    padding: 0 10px 0 0;
+
+    &__title {
+        font-family: 'Akzidenz-Grotesk BQ';
+        font-size: 25px;
+        line-height: 25px;
+        text-transform: uppercase;
+        letter-spacing: 2.5px;
+        margin: 0 0 25px 0;
+        flex: 1 1 auto;
+
+        @media (max-width: $break-lg) {
+            margin: 0 0 10px 0;
+            font-size: 20px;
+            line-height: 20px;
+        }
+
+        @media (max-width: $break-md) {
+            flex: 0 0 auto;
+        }
+
+        @media (max-width: $break-sm) {
+            margin: 0;
+            font-size: 20px;
+        }
+    }
+
+    &__text {
+        color: #000000;
+        font-size: 15px;
+        line-height: 25px;
+
+        @media (max-width: $break-sm) {
+            line-height: 18px;
+            font-size: 15px;
+        }
+    }
+}
+
+//===================================================
+
+.contacts {
+    padding: 80px 0 0 0;
+
+    @media (max-width: $break-md) {
+        padding: 20px 0;
+    }
+
+    &__title {
+        font-family: 'Akzidenz-Grotesk BQ';
+        font-size: 50px;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        margin: 0 0 32px 0;
+
+        @media (max-width: $break-sm) {
+            font-size: 40px;
+            margin: 0 0 20px 0;
+        }
+    }
+
+}
+
+.contacts-body {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__column {
+        flex: 0 0  50%;
+        margin: 0 0 28px 0;
+
+        @media (max-width: $break-md) {
+            flex: 0 0 100%;
+        }
+
+        @media (max-width: $break-sm) {
+            margin: 0 0 20px 0;
+        }
+    }
+
+    &__item {
+        font-size: 15px;
+        line-height: 25px;
+        color: #000;
+        padding: 0 0 0 35px;
+        display: inline-block;
+        line-height: 27px;
+
+        &--adress {
+            background: url("../img/block_4/adress.svg") left no-repeat;
+        }
+
+        &--email {
+            background: url("../img/block_4/email.svg") left no-repeat;
+        }
+
+        &--phone {
+            background: url("../img/block_4/telephone.svg") left no-repeat;
+        }
+    }
+}
+
+.contact-social {
+    display: flex;
+
+    &__item{
+        margin: 0 31px 0 0;
+    }
+}
+    
+.contacts-content {
+    display: flex;
+    background-color: #000;
+    @media (max-width: $break-md) {
+        flex-direction: column;
+    }
+
+    &__column {
+        flex: 0 0 50%;
+    }
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+    @media (max-width: $break-md) {
+        display: block;
+        width: 100%;
+        height: 300px;
+    }
+}
+
+.contacts-content-form {
+    padding: 55px 60px;
+
+    @media (max-width: $break-md) {
+        padding: 30px;
+    }
+
+    &__title {
+        color: #ffffff;
+        font-family: 'Akzidenz-Grotesk BQ';
+        font-size: 25px;
+        line-height: 25px;
+        text-transform: uppercase;
+        letter-spacing: 2.5px;
+        margin: 0 0 30px 0;
+    }
+
+    &__body {
+        max-width: 375px;
+
+        @media (max-width: $break-md) {
+            max-width: none;
+        }
+    }
+
+    &__btn {
+        padding: 18px 25px;
+    }
+}
+.contacts-content-form-line {
+    margin: 0 0 25px 0;
+}
+.input {
+    width: 100%;
+    border: 2px solid #959595;
+    background-color: #252525;
+    padding: 0 18px;
+    height: 50px;
+    color: #959595;
+    font-size: 15px;
+    line-height: 25px;
+}
+
+textarea.input {
+    height: 100px;
+    padding: 10px 18px;
+    resize: none;
+}

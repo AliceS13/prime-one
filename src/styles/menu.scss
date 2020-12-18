@@ -1,0 +1,147 @@
+.header-menu{   
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    display: none;
+    @media (max-width: $break-md) {
+        display: inline-block;
+    }
+    &__icon {
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        position: relative;
+        top: 30px;
+        left: 10px;
+        background: transparent;
+        z-index: 5;
+        display: none;
+        @media (max-width: $break-md) {
+            display: inline-block;
+        }
+    }
+}
+
+.header-menu__icon span,
+.header-menu__icon span::after,
+.header-menu__icon span::before {
+    position: absolute;
+    width: 30px;
+    height: 1px;
+    background-color: #000;
+    top: calc(50%);
+    left: calc(50% - 15px);
+}   
+
+.header-menu__icon span::after,
+.header-menu__icon span::before {
+    content: '';
+    display: block;
+    transition: .3s;
+}
+
+.header-menu__icon span::before {
+    transform: translateY(-12px);
+}
+
+.header-menu__icon span::after {
+    transform: translateY(12px);
+}
+
+.active {
+    position: fixed;
+}
+
+.active span {
+    background: transparent;
+}
+
+.active span::before {
+    transform: rotate(45deg);
+}
+
+.active span::after {
+    transform: rotate(-45deg);
+}
+
+// ===========================================
+
+.header-menu-wrapper {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    background-color: #fff;
+    transform: translateX(-100%);
+    transition: 1s;
+
+    @media (max-width: $break-md) {
+        width: 60%;
+    }
+
+    @media (max-width: $break-sm) {
+        width: 100%;
+    }
+}
+
+.header-menu-list {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    li {
+        padding: 20px 0;
+        width: 100%;
+        &:hover {
+            transition: .5s;
+            background-color: rgba(0, 0, 0, .1);
+        }
+    }
+}
+
+.header-menu {
+    &__link {
+        color: #000000;
+        font-family: 'Akzidenz-Grotesk BQ';
+        font-size: 15px;
+        line-height: 25px;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.header-menu-lang {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    &__link {
+        display: inline-block;
+        color: #000000;
+        font-family: 'Akzidenz-Grotesk BQ';
+        font-size: 15px;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        &:not(:last-child) {
+            margin: 0 15px 0 0;
+        }
+        &.chosen {
+            color: #fff;
+            background-color: #000;
+            padding: 2px;
+        }
+    }
+}
+
+
+.open {
+    transform: translateX(0%);
+}
+
