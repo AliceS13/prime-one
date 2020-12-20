@@ -1,12 +1,14 @@
-.header-menu{   
+.header-menu {   
     position: absolute;
     top: 0;
     left: 0;
     z-index: 0;
     display: none;
+
     @media (max-width: $break-md) {
         display: inline-block;
     }
+
     &__icon {
         cursor: pointer;
         width: 40px;
@@ -17,9 +19,23 @@
         background: transparent;
         z-index: 5;
         display: none;
+
         @media (max-width: $break-md) {
             display: inline-block;
         }
+    }
+
+    &__link {
+        color: #000000;
+        font-family: 'Akzidenz-Grotesk BQ';
+        font-size: 15px;
+        line-height: 25px;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
 
@@ -38,7 +54,7 @@
 .header-menu__icon span::before {
     content: '';
     display: block;
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .header-menu__icon span::before {
@@ -92,28 +108,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     li {
         padding: 20px 0;
         width: 100%;
+
         &:hover {
             transition: .5s;
             background-color: rgba(0, 0, 0, .1);
         }
-    }
-}
-
-.header-menu {
-    &__link {
-        color: #000000;
-        font-family: 'Akzidenz-Grotesk BQ';
-        font-size: 15px;
-        line-height: 25px;
-        text-transform: uppercase;
-        letter-spacing: 1.5px;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
     }
 }
 
@@ -122,6 +125,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
+
     &__link {
         display: inline-block;
         color: #000000;
@@ -129,9 +133,11 @@
         font-size: 15px;
         text-transform: uppercase;
         letter-spacing: 1.5px;
+
         &:not(:last-child) {
             margin: 0 15px 0 0;
         }
+
         &.chosen {
             color: #fff;
             background-color: #000;
@@ -140,8 +146,6 @@
     }
 }
 
-
 .open {
     transform: translateX(0%);
 }
-

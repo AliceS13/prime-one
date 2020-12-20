@@ -1,5 +1,6 @@
 .header {
     padding: 30px 0;
+
     @media (max-width: $break-md) {
         padding: 10px 0;
     }
@@ -13,9 +14,10 @@
 
 .header-top-lang {
     display: flex;
+
     &__item {
         display: inline-block;
-        color: #000000;
+        color: #000;
         font-family: 'Conv_Bebas Neue';
         font-size: 10px;
         line-height: 25px;
@@ -24,10 +26,12 @@
         text-decoration: underline;
         padding: 0 4px;
         margin: 0 10px 0 0;
+
         @media (max-width: $break-md) {
             display: none;
         }
     }
+
     .chosen {
         color: #fff;
         background-color: #000;
@@ -36,16 +40,18 @@
 }
 
 .header-top-link {
-    color: #000000;
+    color: #000;
     font-family: 'Akzidenz-Grotesk BQ';
     font-size: 15px;
     line-height: 25px;
     text-transform: uppercase;
     text-decoration: underline;
+
     @media (max-width: $break-md) {
         position: relative;
         top: 40px;
     }
+
     @media (max-width: $break-sm) {
         font-size: 12px;
     }
@@ -60,7 +66,7 @@
 
 .header-bottom-menu {
     &__link {
-        color: #000000;
+        color: #000;
         font-family: 'Akzidenz-Grotesk BQ';
         font-size: 15px;
         line-height: 25px;
@@ -71,11 +77,14 @@
 
 .header-bottom-menu-list {
     display: flex;
+
     @media (max-width: $break-md) {
         display: none;
     }
+
     :not(:last-child) {
         margin: 0 40px 0 0;
+
         @media (max-width: $break-lg) {
             margin: 0 20px 0 0;
         }
@@ -89,12 +98,13 @@
     align-items: center;
 
     &__text {
-        color: #000000;
+        color: #000;
         font-family: 'Conv_Bebas Neue';
         font-size: 12px;
         line-height: 25px;
         text-transform: uppercase;
         letter-spacing: 7px;
+
         @media (max-width: $break-md) {
             line-height: 12px;
         }
@@ -107,16 +117,14 @@
         margin: 3px 0 15px 0;
         width: 212px;
         height: 54px;
+
         img {
             width: 100%;
         }
+
         @media (max-width: $break-sm) {
             width: 130px;
             margin: 3px 0 3px 0;
         }
-        
     }
-    
 }
-
-
